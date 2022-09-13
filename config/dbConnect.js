@@ -2,7 +2,7 @@ const { connect } = require('mongoose');
 
 async function dbConnect() {
   try {
-    await connect('mongobd//localhost:27017', {
+    await connect('mongodb://localhost:27017', {
       dbName: 'Shop',
     });
   } catch (error) {
@@ -10,3 +10,7 @@ async function dbConnect() {
     process.exit(1);
   }
 }
+
+module.exports = {
+  dbConnect,
+};

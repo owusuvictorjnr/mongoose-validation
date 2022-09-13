@@ -9,10 +9,6 @@ const postSchema = new Schema({
     type: String,
     required: true,
   },
-  published: {
-    type: Boolean,
-    default: false,
-  },
 });
 
-module.exports = model('Post', new Schema());
+module.exports = model('Post', postSchema);
