@@ -18,8 +18,7 @@ app.use('/auth', authRouter);
 
 async function start() {
   await dbConnect();
-}
-async function start() {
+
   app.listen(4000, (err) => console.log('Server listening on port: ', 4000));
 }
 start();
